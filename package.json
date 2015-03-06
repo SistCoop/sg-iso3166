@@ -1,7 +1,7 @@
 {
   "name": "ui-iso3166",
   "description": "Restful factories for iso3166",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "filename": "ui-iso3166.min.js",
   "main": "./dist/ui-iso3166.min.js",
   "homepage": "https://github.com/SistCoopEE/ui-iso3166",

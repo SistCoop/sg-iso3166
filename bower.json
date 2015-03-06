@@ -1,6 +1,6 @@
 {
   "name": "ui-iso3166",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "main": "./dist/ui-iso3166.js",
   "description": "Restful factories for iso3166",
   "repository": {

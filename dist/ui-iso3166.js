@@ -1,6 +1,6 @@
 /**
  * Restful factories for iso3166
- * @version v0.0.1 - 2015-03-06 * @link https://github.com/SistCoopEE/ui-iso3166
+ * @version v0.0.3 - 2015-03-06 * @link https://github.com/SistCoopEE/ui-iso3166
  * @author Carlos feria <carlosthe19916@gmail.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */(function(){
