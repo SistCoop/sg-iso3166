@@ -1,25 +1,34 @@
 /**
  * Restful factories for iso3166
- * @version v0.0.3 - 2015-03-06 * @link https://github.com/SistCoopEE/ui-iso3166
+ * @version v0.0.5 - 2015-03-06 * @link https://github.com/SistCoopEE/ui-iso3166
  * @author Carlos feria <carlosthe19916@gmail.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */(function(){
 
     var module = angular.module('ui-iso3166', ['restangular']);
 
-    module.constant('CONFIGURATION', {
-        'restUrl': {
-            'iso3166': 'http://localhost:3000'
-        }
+    module.provider('uiIso3166', function() {
+
+        var config = {};
+        config.restUrl = 'http://localhost:3000';
+
+        /*this.setRestUrl = function(url) {
+         config.restUrl = url;
+         };*/
+
+        this.$get = function() {
+            return config;
+        };
+
     });
 
-    module.factory('Iso3166Restangular', function(Restangular, CONFIGURATION) {
+    module.factory('Iso3166Restangular', ['Restangular', 'uiIso3166', function(Restangular, uiIso3166) {
         return Restangular.withConfig(function(RestangularConfigurer) {
-            RestangularConfigurer.setBaseUrl(CONFIGURATION.restUrl.iso3166);
+            RestangularConfigurer.setBaseUrl(uiIso3166.restUrl);
         });
-    });
+    }]);
 
-    module.factory('Iso3166AbstractModel', function(Iso3166Restangular){
+    module.factory('Iso3166AbstractModel', ['Iso3166Restangular', function(Iso3166Restangular){
         var url = '';
         var modelMethos = {
             $new: function(id){
@@ -45,9 +54,9 @@
                 return Iso3166Restangular.one(url, id).remove();
             }
         }
-    });
+    }]);
 
-    module.factory('CountryCode', function(Iso3166Restangular) {
+    module.factory('CountryCode', ['Iso3166Restangular',  function(Iso3166Restangular) {
 
         var url = 'country_codes';
         var urlAlpha2Code = 'country_codes/alpha2Code';
@@ -137,10 +146,10 @@
 
         return modelMethos;
 
-    });
+    }]);
 
 
-   module.factory('CountryName', function(Iso3166Restangular) {
+    module.factory('CountryName', ['Iso3166Restangular',function(Iso3166Restangular) {
 
         var url = 'country_names';
 
@@ -178,10 +187,10 @@
 
         return modelMethos;
 
-    });
+    }]);
 
 
-    module.factory('Language', function(Iso3166Restangular) {
+    module.factory('Language', ['Iso3166Restangular',function(Iso3166Restangular) {
 
         var url = 'languages';
 
@@ -219,10 +228,10 @@
 
         return modelMethos;
 
-    });
+    }]);
 
 
-    module.factory('SubdivisionCategory', function(Iso3166Restangular) {
+    module.factory('SubdivisionCategory', ['Iso3166Restangular', function(Iso3166Restangular) {
 
         var url = 'subdivisionCategories';
 
@@ -260,10 +269,10 @@
 
         return modelMethos;
 
-    });
+    }]);
 
 
-    module.factory('Territory', function(Iso3166Restangular) {
+    module.factory('Territory', ['Iso3166Restangular',function(Iso3166Restangular) {
 
         var url = 'territories';
 
@@ -301,6 +310,6 @@
 
         return modelMethos;
 
-    });
+    }]);
 
 })();
