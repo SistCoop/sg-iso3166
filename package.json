@@ -1,0 +1,54 @@
+{
+  "name": "ui-iso3166",
+  "description": "Restful factories for iso3166",
+  "version": "0.0.1",
+  "filename": "ui-iso3166.min.js",
+  "main": "./dist/ui-iso3166.min.js",
+  "homepage": "https://github.com/SistCoopEE/ui-iso3166",
+  "author": "Carlos feria <carlosthe19916@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SistCoopEE/ui-iso3166.git"
+  },
+  "engines": {
+    "node": ">= 0.9"
+  },
+  "keywords": [
+    "angular",
+    "client",
+    "browser",
+    "restful",
+    "resources",
+    "rest",
+    "api"
+  ],
+  "maintainers": [
+    {
+      "name": "Carlos feria",
+      "website": "https://github.com/SistCoopEE/ui-iso3166"
+    }
+  ],
+  "dependencies": {
+    "lodash": ">=1.3.0 <2.5.0"
+  },
+  "devDependencies": {
+    "grunt-cli": ">= 0.1.7",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-bower": "*",
+    "grunt-bower-task": "*",
+    "grunt-karma": "latest",
+    "grunt-conventional-changelog": "0.0.12",
+    "grunt-zip": "*",
+    "karma": "~0.12.1",
+    "karma-jasmine": "~0.1.5",
+    "karma-chrome-launcher": "~0.1.2",
+    "karma-phantomjs-launcher": "~0.1.2",
+    "karma-firefox-launcher": "~0.1.3"
+  },
+  "scripts": {
+    "test": "grunt test --verbose"
+  },
+  "license": "MIT"
+}

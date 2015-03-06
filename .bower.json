@@ -1,0 +1,31 @@
+{
+  "name": "ui-iso3166",
+  "version": "0.0.1",
+  "main": "./dist/ui-iso3166.js",
+  "description": "Restful factories for iso3166",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/SistCoopEE/ui-iso3166.git"
+  },
+  "dependencies": {
+    "lodash": ">=1.3.0 <2.5.0",
+    "angular": "*",
+    "restangular": "1.4.0",
+    "underscore": "1.7.0"
+  },
+  "ignore": [
+    "node_modules",
+    "components",
+    "lib"
+  ],
+  "homepage": "https://github.com/SistCoopEE/ui-iso3166",
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.1",
+    "commit": "34c2951d5fb5d823fb0d7bc2b4bb99f71d6956e2"
+  },
+  "_source": "https://github.com/SistCoopEE/ui-iso3166.git",
+  "_target": "0.0.1",
+  "_originalSource": "ui-iso3166"
+}
