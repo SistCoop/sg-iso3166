@@ -1,15 +1,11 @@
 (function(){
 
-    var module = angular.module('ui-iso3166', ['restangular']);
+    var module = angular.module('sg-iso3166', ['restangular']);
 
-    module.provider('uiIso3166', function() {
+    module.provider('sgIso3166', function() {
 
         var config = {};
         config.restUrl = 'http://localhost:3000';
-
-        /*this.setRestUrl = function(url) {
-         config.restUrl = url;
-         };*/
 
         this.$get = function() {
             return config;
@@ -17,9 +13,9 @@
 
     });
 
-    module.factory('Iso3166Restangular', ['Restangular', 'uiIso3166', function(Restangular, uiIso3166) {
+    module.factory('Iso3166Restangular', ['Restangular', 'sgIso3166', function(Restangular, sgIso3166) {
         return Restangular.withConfig(function(RestangularConfigurer) {
-            RestangularConfigurer.setBaseUrl(uiIso3166.restUrl);
+            RestangularConfigurer.setBaseUrl(sgIso3166.restUrl);
         });
     }]);
 

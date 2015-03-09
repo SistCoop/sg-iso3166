@@ -1,11 +1,11 @@
 {
-  "name": "ui-iso3166",
-  "version": "0.0.5",
-  "main": "./dist/ui-iso3166.js",
+  "name": "sg-iso3166",
+  "version": "1.0.0",
+  "main": "./dist/sg-iso3166.js",
   "description": "Restful factories for iso3166",
   "repository": {
       "type": "git",
-      "url": "https://github.com/SistCoopEE/ui-iso3166.git"
+      "url": "https://gitlab.com/SistCoopEE/ui-iso3166.git"
   },
   "dependencies": {
     "lodash": ">=1.3.0 <2.5.0",

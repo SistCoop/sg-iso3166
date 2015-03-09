@@ -1,7 +1,7 @@
-var module = angular.module('iso-3166', ['restangular', 'ui-iso3166']);
+var module = angular.module('iso-3166', ['restangular', 'sg-iso3166']);
 
-module.config(function(uiIso3166Provider){
-    uiIso3166Provider.restUrl = 'https://someweb';
+module.config(function(sgIso3166Provider){
+    sgIso3166Provider.restUrl = 'https://someweb';
 });
 
 module.controller('PruebaController', function($scope, Restangular, CountryCode){
