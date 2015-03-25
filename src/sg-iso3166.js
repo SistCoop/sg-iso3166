@@ -2,25 +2,37 @@
 
     var module = angular.module('sg-iso3166', ['restangular']);
 
+
     module.provider('sgIso3166', function() {
 
-        var config = {};
-        config.restUrl = 'http://localhost:3000';
+        this.restUrl = 'http://localhost';
 
         this.$get = function() {
-            return config;
+            var restUrl = this.restUrl;
+            return {
+                getRestUrl: function() {
+                    return restUrl;
+                }
+            }
         };
 
+        this.setRestUrl = function(restUrl) {
+            this.restUrl = restUrl;
+        };
     });
+
 
     module.factory('Iso3166Restangular', ['Restangular', 'sgIso3166', function(Restangular, sgIso3166) {
         return Restangular.withConfig(function(RestangularConfigurer) {
-            RestangularConfigurer.setBaseUrl(sgIso3166.restUrl);
+            RestangularConfigurer.setBaseUrl(sgIso3166.getRestUrl());
         });
     }]);
 
+
     module.factory('Iso3166AbstractModel', ['Iso3166Restangular', function(Iso3166Restangular){
+
         var url = '';
+
         var modelMethos = {
             $new: function(id){
                 return angular.extend({id: id}, modelMethos);
@@ -47,7 +59,8 @@
         }
     }]);
 
-    module.factory('CountryCode', ['Iso3166Restangular',  function(Iso3166Restangular) {
+
+    module.factory('SGCountryCode', ['Iso3166Restangular',  function(Iso3166Restangular) {
 
         var url = 'country_codes';
         var urlAlpha2Code = 'country_codes/alpha2Code';
@@ -96,11 +109,9 @@
                 return Iso3166Restangular.one(urlNumericCode, numericCode).get();
             },
 
-
             $count: function(){
                 return Iso3166Restangular.one(urlCount).get();
             },
-
 
             $disable: function(){
                 return Iso3166Restangular.all(url+'/'+this.id+'/disable').post();
@@ -140,7 +151,7 @@
     }]);
 
 
-    module.factory('CountryName', ['Iso3166Restangular',function(Iso3166Restangular) {
+    module.factory('SGCountryName', ['Iso3166Restangular',function(Iso3166Restangular) {
 
         var url = 'country_names';
 
@@ -181,7 +192,7 @@
     }]);
 
 
-    module.factory('Language', ['Iso3166Restangular',function(Iso3166Restangular) {
+    module.factory('SGLanguage', ['Iso3166Restangular',function(Iso3166Restangular) {
 
         var url = 'languages';
 
@@ -222,7 +233,7 @@
     }]);
 
 
-    module.factory('SubdivisionCategory', ['Iso3166Restangular', function(Iso3166Restangular) {
+    module.factory('SGSubdivisionCategory', ['Iso3166Restangular', function(Iso3166Restangular) {
 
         var url = 'subdivisionCategories';
 
@@ -263,7 +274,7 @@
     }]);
 
 
-    module.factory('Territory', ['Iso3166Restangular',function(Iso3166Restangular) {
+    module.factory('SGTerritory', ['Iso3166Restangular',function(Iso3166Restangular) {
 
         var url = 'territories';
 
