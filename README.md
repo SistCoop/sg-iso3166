@@ -4,6 +4,16 @@ Es un api que permite usar restangular models para iso3166.
 
 > Revisar iso3166 para mayor informacion.
 
+### Url rest
+Puede cambiar el url de los servicios restfull con 
+
+````javascript
+// Change url restful services
+app.config(function(sgIso3166Provider){
+    sgIso3166Provider.restUrl = 'https://someweb/rest';
+});
+````
+
 ### Factories
 * SGCountryCode
 
