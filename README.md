@@ -23,6 +23,7 @@ Es un api que permite usar restangular models para iso3166.
 | SGCountryCode.$removeByAlpha3Code(alpha3Code)     | Eliminar uno segun alpha3Code     |
 | SGCountryCode.$removeByNumericCode(numericCode)   | Eliminar uno segun numericCode    |
 
+
 Los objetos countryCodes tienen la siguiente estructura:
 
 ```json
