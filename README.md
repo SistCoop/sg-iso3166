@@ -11,8 +11,8 @@ Es un api que permite usar restangular models para iso3166.
 | Method                                            | Descripcion                   |
 | :------------ ------------------------------------|:------------------------------|
 | SGCountryCode.$build()                            | Crea objeto vacio             |
-| SGCountryCode.$saveByAlpha2Code()                 | Guarda segun alpha3Code       |
-| SGCountryCode.$saveByAlpha3Code()                 | Guarda segun alpha2Code       |
+| SGCountryCode.$saveByAlpha2Code()                 | Guarda segun alpha2Code       |
+| SGCountryCode.$saveByAlpha3Code()                 | Guarda segun alpha3Code       |
 | SGCountryCode.$saveByNumericCode()                | Guarda segun numericCode      |
 | SGCountryCode.$search(params)                     | Buscar segun parametros       |
 | SGCountryCode.$findByAlpha2code(alpha2Code)       | Buscar uno segun alpha2Code   |
@@ -23,6 +23,20 @@ Es un api que permite usar restangular models para iso3166.
 | SGCountryCode.$removeByAlpha3Code(alpha3Code)     | Eliminar uno segun alpha3Code |
 | SGCountryCode.$removeByNumericCode(numericCode)   | Eliminar uno segun numericCode|
 
+| Method        URL                                 | Descripcion                       |
+| :-------------------------------------------------|:----------------------------------|
+| SGCountryCode.$build()                            | Crea objeto vacio                 |
+| SGCountryCode.$saveByAlpha2Code()                 | Guarda segun alpha2Code           |
+| SGCountryCode.$saveByAlpha3Code()                 | Guarda segun alpha3Code           |
+| SGCountryCode.$saveByNumericCode()                | Guarda segun numericCode          |
+| SGCountryCode.$search(params)                     | Buscar segun parametros           |
+| SGCountryCode.$findByAlpha2code(alpha2Code)       | Buscar uno segun alpha2Code       |
+| SGCountryCode.$findByAlpha2code(alpha3Code)       | Buscar uno segun alpha3Code       |
+| SGCountryCode.$findByAlpha2code(numericCode)      | Buscar uno segun numericCode      |
+| SGCountryCode.$count()                            | Contar size()                     |
+| SGCountryCode.$removeByAlpha2Code(alpha2Code)     | Eliminar uno segun alpha2Code     |
+| SGCountryCode.$removeByAlpha2Code(alpha3Code)     | Eliminar uno segun alpha3Code     |
+| SGCountryCode.$removeByAlpha2Code(alpha3Code)     | Eliminar uno segun numericCode    |
 
 Los objetos countryCodes tienen la siguiente estructura:
 
