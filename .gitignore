@@ -85,4 +85,4 @@ modules/views/
 # --------------------
 *.swp
 
-./idea
+lib/

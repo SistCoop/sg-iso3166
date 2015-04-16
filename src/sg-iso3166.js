@@ -1,3 +1,5 @@
+'use strict';
+
 (function(){
 
     var module = angular.module('sg-iso3166', ['restangular']);

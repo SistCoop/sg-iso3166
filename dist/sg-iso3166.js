@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Restful factories for iso3166
  * @version v0.0.6 - 2015-03-25 * @link https://github.com/SistCoop/sg-iso3166
