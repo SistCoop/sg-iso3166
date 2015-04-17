@@ -1,11 +1,6 @@
 'use strict';
 
-/**
- * Restful factories for iso3166
- * @version v0.0.6 - 2015-03-25 * @link https://github.com/SistCoop/sg-iso3166
- * @author Carlos feria <carlosthe19916@gmail.com>
- * @license MIT License, http://www.opensource.org/licenses/MIT
- */(function(){
+(function(){
 
     var module = angular.module('sg-iso3166', ['restangular']);
 
