@@ -64,11 +64,11 @@
 
     module.factory('SGCountryCode', ['Iso3166Restangular',  function(Iso3166Restangular) {
 
-        var url = 'country_codes';
-        var urlAlpha2Code = 'country_codes/alpha2Code';
-        var urlAlpha3Code = 'country_codes/alpha3Code';
-        var urlNumericCode = 'country_codes/numericCode';
-        var urlCount = 'country_codes/count';
+        var url = 'countryCodes';
+        var urlAlpha2Code = 'countryCodes/alpha2Code';
+        var urlAlpha3Code = 'countryCodes/alpha3Code';
+        var urlNumericCode = 'countryCodes/numericCode';
+        var urlCount = 'countryCodes/count';
 
         var modelMethos = {
             $new: function(id){
@@ -155,7 +155,7 @@
 
     module.factory('SGCountryName', ['Iso3166Restangular',function(Iso3166Restangular) {
 
-        var url = 'country_names';
+        var url = 'countryNames';
 
         var modelMethos = {
             $new: function(id){
@@ -196,7 +196,7 @@
 
     module.factory('SGLanguage', ['Iso3166Restangular',function(Iso3166Restangular) {
 
-        var url = 'languages';
+        var url = 'countryLanguages';
 
         var modelMethos = {
             $new: function(id){
