@@ -34,6 +34,12 @@
 
             /**
              * Retorna url*/
+            $getModelMethods: function () {
+                return modelMethods;
+            },
+
+            /**
+             * Retorna url*/
             $getBasePath: function () {
                 return path;
             },
@@ -61,7 +67,7 @@
             },
 
             $search: function (queryParams) {
-                return restangular.all(path).get(queryParams);
+                return restangular.all(path).customGET('', queryParams);
             },
 
             $find: function (id) {
