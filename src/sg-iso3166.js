@@ -67,7 +67,10 @@
             },
 
             $search: function (queryParams) {
-                return restangular.all(path).customGET('', queryParams);
+                return restangular.all(path).customGET('search', queryParams);
+            },
+            $getAll: function (queryParams) {
+                return restangular.all(path).getList(queryParams);
             },
 
             $find: function (id) {
